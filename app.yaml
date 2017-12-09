@@ -1,0 +1,3 @@
+entrypoint: stripestuff.erb
+env: flex
+runtime: ruby
