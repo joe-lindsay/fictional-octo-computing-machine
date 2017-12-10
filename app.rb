@@ -6,11 +6,11 @@ require "sinatra"
 #Stripe.api_key = "sk_test_ECAvVBtdKXp9xUaX8V7XjOmf"
 
 get '/' do
-  puts 'Hello world!'
+  "Hello world!"
 end
 
 get '/fun' do
-  puts 'Show me what you got.'
+  "Show me what you got."
 end
 
 # puts "Enter the pennies you want to pay."
