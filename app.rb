@@ -10,7 +10,15 @@ get '/' do
 end
 
 get '/fun' do
-  "Show me what you got."
+  "Show me what you got!"
+end
+
+get '/number' do
+  p "Hello world! Give me a number."
+
+num = gets.to_i
+
+puts "Your number times 2 is " + (num * 2).to_s
 end
 
 # puts "Enter the pennies you want to pay."
