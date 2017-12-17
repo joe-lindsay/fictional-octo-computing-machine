@@ -1,0 +1,53 @@
+<!-- require "stripe"
+Stripe.api_key = "sk_test_ECAvVBtdKXp9xUaX8V7XjOmf"
+
+<html>
+    <head>
+        <title>HTML - Web Form</title>
+    </head>
+<body>
+
+<h1>Fill Out This Form</h1>
+
+<form action="/hello" method="POST">
+    A Farting: <input type="text" name="greeting">
+    <br/>
+    Your Name: <input type="text" name="name">
+    <br/>
+    <input type="submit">
+</form>
+
+</body>
+</html> -->
+
+doctype html
+html
+  head
+    title Slim Examples
+    meta name="keywords" content="template language"
+    meta name="author" content=author
+    javascript:
+      alert('Slim supports embedded javascript!')
+
+  body
+    h1 Markup examples
+
+    #content
+      p This example shows you what a basic Slim file looks like.
+
+      == yield
+
+      - unless items.empty?
+        table
+          - items.each do |item|
+            tr
+              td.name = item.name
+              td.price = item.price
+      - else
+        p
+         | No items found.  Please add some inventory.
+           Thank you!
+
+    div id="footer"
+      = render 'footer'
+      | Copyright © #{year} #{author}
