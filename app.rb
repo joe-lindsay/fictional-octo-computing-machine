@@ -1,6 +1,7 @@
 require "rubygems"
 require "sinatra"
 require "stripe"
+require 'twilio-ruby'
 
 set :port, 8080
 set :static, true
@@ -12,15 +13,21 @@ set :secret_key, 'sk_test_ECAvVBtdKXp9xUaX8V7XjOmf'
 
 Stripe.api_key = settings.secret_key
 
+
+account_sid = "AC5d6208d8fbd6d44158c055fd47049e45" # Your Account SID from www.twilio.com/console
+auth_token = "3aea70c85a88c56383d6f7828a28a0b4"   # Your Auth Token from www.twilio.com/console
+
+
+#0/n
 get '/' do
   erb :index
 end
 
-get '/stripe' do
+#1/n
+get '/charge' do
   # "Show me what you had today!"
-   erb :checkout
+   erb :charge_form
 end
-
 
 post '/charge' do
   # Amount in cents
@@ -41,6 +48,7 @@ post '/charge' do
   erb :charge
 end
 
+#2/n
 get '/hello' do
     erb :hello_form
 end
@@ -52,30 +60,32 @@ post '/hello' do
     erb :greet, :locals => {'greeting' => greeting, 'name' => name}
 end
 
+#3/n
 get '/number' do
-  "Hello world! Give me a number."
-
-num = gets.to_i
-
-  "Your number times 2 is " + (num * 2).to_s
+    erb :number_form
 end
 
-__END__
+post '/number' do
+number = params[:small_num] * 2
 
-@@ layout
-  <!DOCTYPE html>
-  <html>
-  <head></head>
-  <body>
-    <%= yield %>
-  </body>
-  </html>
+  erb :number, :locals => {'number' => number}
+end
 
-# puts "Enter the pennies you want to pay."
-#
-# Stripe::Charge.create(
-#   :amount => gets.chomp.to_i,
-#   :currency => "usd",
-#   :customer => "cus_BuwFujRqlViinj", # obtained with Stripe.js
-#   :description => "Charge for noah.williams@example.com"
-# )
+#4/n
+get '/phone' do
+    erb :phone_form
+end
+
+post '/phone' do
+  phone_number = params[:pjone]
+
+  client = Twilio::REST::Client.new account_sid, auth_token
+  message = client.messages.create(
+      body: "Joe says hello",
+      to: phone_number,    # Replace with your phone number
+      from: +14159171657)  # Replace with your Twilio number
+
+  puts message.sid
+end
+
+#end

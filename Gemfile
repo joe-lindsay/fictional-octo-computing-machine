@@ -17,6 +17,7 @@ source "https://rubygems.org"
 
 gem "sinatra"
 gem "stripe"
+gem "twilio-ruby"
 # [END dependencies]
 
 group :test do
