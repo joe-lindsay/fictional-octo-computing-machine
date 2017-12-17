@@ -1,6 +1,6 @@
 require "rubygems"
-# require "sinatra"
-# require "stripe"
+require "sinatra"
+require "stripe"
 
 set :port, 8080
 set :static, true
