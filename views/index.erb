@@ -1,17 +1,160 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Front Page</title>
-    </head>
+<title>10Minutes.io</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 
-Past work:
-<p>
-<a href="/hello">Greeting engine</a> </br>
-<a href="/number">Calculator for very specific circumstances</a> </br>
-<a href="/charge">Stripe integration</a> </br>
-<a href="/phone">Joe will text you</a> </br>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>10Minutes</b>.io</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
 
-</p>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://images.pexels.com/photos/360591/pexels-photo-360591.jpeg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>10Minutes starts with the idea that everything worth learning starts with 10 minutes of discomfort.</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-container w3-padding-32">
+  <p>I distilled my learning process into three sections -- the infrastructure,
+    the connections and the polish.
+    There's also a gallery of Projects to draw inspiration from and shamelessly copy.
+  </p>
+</div>
+
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Steps</h3>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://static.pexels.com/photos/699122/pexels-photo-699122.jpeg" alt="101" style="width:100%">
+      <h3>Hello World Application</h3>
+      <p class="w3-opacity">101</p>
+      <p>You'll build:</br>
+        * A Ruby program that uses Sinatra</br>
+        * Atom / Github / App Engine connection + context</br>
+        * A test and a live version of your Hello World application</p>
+      <p><button class="w3-button w3-light-grey w3-block">Get started</button></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src= "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="201" style="width:100%">
+      <h3>Connecting to the world</h3>
+      <p class="w3-opacity">201</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Connect</button></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://static.pexels.com/photos/34202/pexels-photo.jpg" alt="301" style="width:100%">
+      <h3>The Fanciness</h3>
+      <p class="w3-opacity">301</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Finish up</button></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom"><a href="/nextsteps">
+      <img src="https://static.pexels.com/photos/577585/pexels-photo-577585.jpeg" alt="Grad" style="width:100%">
+      <h3>Next Steps</h3>
+      <p class="w3-opacity">Grad</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Keep going</button></p>
+    </div>
+  </div>
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Project Gallery</h3>
+  </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/number">Calculator (wip)</a></div>
+        <img src="https://static.pexels.com/photos/159804/accountant-accounting-adviser-advisor-159804.jpeg" alt="House" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/map">Map (wip)</a></div>
+        <img src="/w3images/house3.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/data">Databases (wip)</a></div>
+        <img src="/w3images/house3.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/hello">Greeting engine</a></div>
+        <img src="/w3images/house4.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/charge">Stripe integration</a> </div>
+        <img src="/w3images/house2.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/phone">Joe will text you</a> </div>
+        <img src="/w3images/house5.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Contact Form -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Get in touch here:</p>
+    <form action="/email" method="POST">
+      <input class="w3-input" type="text" placeholder="Name" name="Name">
+      <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
 
 </body>
 </html>

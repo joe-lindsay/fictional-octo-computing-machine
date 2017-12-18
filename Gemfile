@@ -18,6 +18,7 @@ source "https://rubygems.org"
 gem "sinatra"
 gem "stripe"
 gem "twilio-ruby"
+gem "sendgrid-ruby"
 # [END dependencies]
 
 group :test do
