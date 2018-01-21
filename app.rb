@@ -4,7 +4,7 @@ require "stripe"
 require 'twilio-ruby'
 require 'sendgrid-ruby'
 require 'sqlite3'
-require relative '../../app-env'
+require_relative '../../app-env'
 include SendGrid
 
 set :port, 8080
