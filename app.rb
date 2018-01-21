@@ -4,6 +4,7 @@ require "stripe"
 require 'twilio-ruby'
 require 'sendgrid-ruby'
 require 'sqlite3'
+require relative 'app-env'
 include SendGrid
 
 set :port, 8080
@@ -12,9 +13,9 @@ set :port, 8080
 # set :views, "views"
 
 set :publishable_key, 'pk_test_tIN888KxbhuQn3Yq9Ehsy9uu'
-set :secret_key, 'sk_test_ECAvVBtdKXp9xUaX8V7XjOmf'
+#set :secret_key, 'sk_test_ECAvVBtdKXp9xUaX8V7XjOmf'
 
-Stripe.api_key = settings.secret_key
+Stripe.api_key = Stripe_secret #settings.secret_key
 
 
 account_sid = "AC5d6208d8fbd6d44158c055fd47049e45" # Your Account SID from www.twilio.com/console
